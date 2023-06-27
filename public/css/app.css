@@ -32,6 +32,14 @@ body {
     font-size: 24px;
 }
 
+.form-floating>.form-control {
+    padding: 2rem .75rem;
+}
+
+.form-floating>label {
+    padding: .6rem .75rem;
+}
+
 .btn-custom {
     background: transparent;
     color: #174760;

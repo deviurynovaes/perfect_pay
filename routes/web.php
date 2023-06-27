@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [InvoiceController::class, 'index'])->name('invoice.index');
+Route::post('/finalizar-pagamento', [InvoiceController::class, 'createInvoice'])->name('invoice.create');
+Route::get('/buscar-cliente', [InvoiceController::class, 'findClientByEmail'])->name('invoice.find');
+Route::get('/obrigado', [InvoiceController::class, 'success'])->name('invoice.success');
