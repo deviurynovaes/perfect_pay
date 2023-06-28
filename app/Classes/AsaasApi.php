@@ -43,6 +43,8 @@ class AsaasApi {
             'access_token' => $apiKey,
         ])->timeout(180);
 
+        dd($http);
+
         switch (mb_strtoupper($method)) {
             case 'GET':
                 $response = $http->get($fullUrl, $body);
@@ -66,6 +68,8 @@ class AsaasApi {
         if($response->serverError()) {
             throw new \Exception('Servidor indisponível no momento. Tente novamente mais tarde.');
         }
+
+
 
         return $response->object();
     }
