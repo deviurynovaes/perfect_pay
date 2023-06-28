@@ -23,6 +23,11 @@ ASAAS_API_KEY="$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDA
 - iury@test.com
 - su@test.com
 
+### Modalidade: Cartão de Crédito
+
+Em Sandbox as transações são aprovadas automaticamente, caso queira simular um erro é necessário informar o cartão de crédito de número 5184019740373151 (Mastercard) ou 4916561358240741 (Visa).
+
+
 ### Atenção
 
 Notei que existe um sdk para integração com o Asaas, porém quis desenvolver uma classe para exemplificar o consumo de API.

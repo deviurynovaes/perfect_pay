@@ -12,7 +12,7 @@
             <h1 class="card-title mb-4">OBRIGADO :)</h1>
 
             @if($payment->billingType === 'PIX')
-                <p>Acesse o seu boleto através do botão abaixo e pague agora mesmo!</p>
+                <p>Escaneie o QR Code ou copie e cole para pagar agora mesmo!</p>
                 <div class="row mt-5 d-flex justify-content-center">
                     <img src="data:image/png;base64, {{$payment->qrCodeData->encodedImage}}" alt="QR Code"
                          class="img-fluid"

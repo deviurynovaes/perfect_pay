@@ -3,7 +3,12 @@
 @section('title', 'Pagamento')
 
 @section('content')
-    <div class="card w-50 p-4 card-custom">
+    <div id="loading" class="d-none" >
+        <div class="spinner-border">
+        </div>
+    </div>
+
+    <div id="card-global" class="card w-50 p-4 card-custom">
         <div class="card-body text-center">
             <div class="card-image d-flex justify-content-center mb-5">
                 <img src="{{ asset('images/perfectpay_logo.png') }}" class="img-fluid mx-auto" alt="Perfect Pay Logo">
@@ -347,6 +352,14 @@
                 $.ajax({
                     url: '{{route('invoice.find')}}?email=' + $('#email_cliente').val(),
                     method: 'get',
+                    beforeSend: function() {
+                        $('#loading').removeClass('d-none');
+                        $('#card-global').addClass('d-none');
+                    },
+                    complete: function() {
+                        $('#loading').addClass('d-none');
+                        $('#card-global').removeClass('d-none');
+                    },
                     success: function (res) {
                         if (res.success) {
                             window.localStorage.setItem('customer', JSON.stringify(res.result));
