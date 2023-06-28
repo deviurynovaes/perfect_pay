@@ -1,5 +1,7 @@
 ## Perfect Pay
 
+Sistema de processamento de pagamentos integrado ao ambiente de homologação do Asaas, levando em consideração que o cliente deve acessar uma página onde irá selecionar a opção de pagamento entre Boleto, Cartão ou Pix.
+
 ### Instruções para rodar o projeto:
 
 - Clonar o projeto
@@ -20,3 +22,7 @@ ASAAS_API_KEY="$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDA
 
 - iury@test.com
 - su@test.com
+
+### Atenção
+
+Notei que existe um sdk para integração com o Asaas, porém quis desenvolver uma classe para exemplificar o consumo de API.
