@@ -43,8 +43,6 @@ class AsaasApi {
             'access_token' => $apiKey,
         ])->timeout(180);
 
-        dd($http);
-
         switch (mb_strtoupper($method)) {
             case 'GET':
                 $response = $http->get($fullUrl, $body);
